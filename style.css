@@ -1,0 +1,284 @@
+/* font-family: 'Oswald', sans-serif;
+font-family: 'Russo One', sans-serif; */
+
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    background: #1F1C2C;
+    background: -webkit-linear-gradient(to right, #928DAB, #1F1C2C);
+    background: linear-gradient(to right, #928DAB, #1F1C2C);
+    overflow: hidden;
+}
+
+h1.header {
+    position: relative;
+    padding: 10px 0 20px;
+    height: 10vh;
+    border-bottom: 2px solid white;
+    line-height: 10vh;
+    font-family: 'Russo One', sans-serif;
+    font-size: 45px;
+    background: linear-gradient(to right, #ffefba, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+
+/* SECTIONS: */
+/* START */
+
+.start {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    line-height: 90vh;
+    text-align: center;
+}
+
+.start button {
+    padding: 30px 70px;
+    margin: 0 10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    outline: none;
+    transition: .5s
+}
+
+.start button:hover {
+    box-shadow: 0 0 5px 5px white;
+}
+
+.blur {
+    animation: blurAppear 1s linear forwards;
+}
+
+
+/* MANUAL */
+
+.manual {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.minside {
+    position: absolute;
+    width: 80vh;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-align: center;
+    animation: manualAppear 1s linear forwards;
+}
+
+.exit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    background-color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.minside h2 {
+    margin: 10px 0 20px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    border-bottom: 2px solid white;
+}
+
+.minside p {
+    padding: 8px;
+    font-size: 20px;
+}
+
+.exit:hover {
+    background-color: #222;
+}
+
+
+/* SUMMARIES */
+
+.summary {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.sinside {
+    position: absolute;
+    width: 80vh;
+    height: 70vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid white;
+    background: #141E30;
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);
+    background: linear-gradient(to right, #243B55, #141E30);
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    text-align: center;
+    animation: manualAppear 1s linear forwards;
+}
+
+
+.sinside h2 {
+    margin: 10px 0 20px;
+    padding-bottom: 10px;
+    font-size: 35px;
+    border-bottom: 2px solid white;
+}
+
+.wins {
+    margin-bottom: 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.wins span {
+    color: green;
+}
+
+.looses {
+    margin-bottom: 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.looses span {
+    color: red;
+}
+
+.avoid {
+    margin-bottom: 5px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.avoid span {
+    color: gray;
+}
+
+.points {
+    margin-top: 20px;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.points span {
+    color: white;
+}
+
+/* COUNTER BEFORE GAME */
+
+.counter {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.counting {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Russo One', sans-serif;
+    font-size: 100px;
+    color: white;
+}
+
+
+/* GAME */
+
+.game {
+    display: none;
+    width: 100%;
+    height: 90vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 50%;
+    margin: 50px auto;
+}
+
+#one,
+#two {
+    width: 30%;
+    height: 90%;
+    cursor: pointer;
+}
+
+#colortext {
+    font-family: 'Oswald', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 2px white;
+}
+
+
+
+/* ANIMATIONS */
+
+@keyframes blurAppear {
+    0% {
+        filter: blur(0px)
+    }
+
+    100% {
+        filter: blur(8px);
+    }
+}
+
+@keyframes manualAppear {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

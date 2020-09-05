@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Color Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Russo+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="header">Bad Color Game</h1>
+    <section class="start">
+        <button class="playbtn">Zagraj!</button>
+        <button class="manualbtn">Instrukcja</button>
+    </section>
+    <section class="manual">
+        <div class="minside">
+            <div class="exit">X</div>
+            <h2>O co chodzi?</h2>
+            <p>Celem gry jest wybranie kwadratu, którego kolor odpowiada treści napisu (nie jego kolorowi!). Na każdą
+                odpowiedź gracz ma 2 sekundy. Za dobrą +1 punkt, za złą -1, za brak 0. Gra trwa przez 10 rund. </p>
+            <p>RAZ ZAZNACZONEJ ODPOWIEDZI NIE DA SIĘ ZMIENIĆ!</p>
+        </div>
+    </section>
+    <section class="counter">
+        <div class="counting">5</div>
+    </section>
+    <section class="game">
+        <div class="container">
+            <div id="one"></div>
+            <div id="two"></div>
+        </div>
+        <h1 id="colortext"></h1>
+    </section>
+    <section class="summary">
+        <div class="sinside">
+            <div class="exit">X</div>
+            <h2>Koniec</h2>
+            <h4 class="wins">Trafione: <span></span></h3>
+                <h4 class="looses">Spudłowane: <span></span></h3>
+                    <h4 class="avoid">Ominięte: <span></span></h3>
+                        <h3 class="points">Punkty: <span></span></h3>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
